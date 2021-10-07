@@ -1,0 +1,765 @@
+@charset "UTF-8";
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-heigth: 3rem;
+  /*========== CROMATICA ==========*/
+  --hue: 225;
+  --sat: 75%;
+  --color-principal: hsl(var(--hue), var(--sat), 9%);
+  --color-principal-luz: hsl(var(--hue), var(--sat), 30%);
+  --color-principal-claros: hsl(var(--hue), var(--sat), 40%);
+  --color-principal-alterno: hsl(var(--hue), var(--sat), 60%);
+  --color-titulos: hsl(var(--hue), var(--sat), 25%);
+  --color-textos: hsl(var(--hue), 4%, 15%);
+  --color-textos-claros: hsl(var(--hue), 4%, 65%);
+  --body-color: hsl(var(--hue), 0%, 100%);
+  --container-color: #fff;
+  --hover-color:hsl(41, 100%, 68%);
+  --scroll-barra-color: hsl(var(--hue), 4%, 85%);
+  --scroll-thumb-color: hsl(var(--hue), 4%, 75%);
+  /*========== TAMAÑOS DE FUENTES ==========*/
+  --body-font: "Roboto", sans-serif;
+  --display-font-size: 2.5rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+  /*========== TAMAÑOS DE FUENTES ==========*/
+  /*========== GROSOR DE FUENTES ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+  /*========== MARGENES ==========*/
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  /*========== MARGENES ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100; }
+  @media screen and (min-width: 426px) {
+    :root {
+      --display-font-size: 5rem;
+      --h1-font-size: 3.5rem;
+      --h2-font-size: 1.75rem;
+      --h3-font-size: 1.25rem;
+      --normal-font-size: 1rem;
+      --small-font-size: 0.875rem;
+      --smaller-font-size: 0.75rem; } }
+
+/*=============== BASE ===============*/
+*, ::before, ::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+html {
+  scroll-behavior: smooth; }
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--color-textos);
+  transition: .5s; }
+
+h1, h2, h3 {
+  font-weight: var(--font-semi-bold);
+  color: var(--color-titulos);
+  line-height: 1.5rem; }
+
+ul {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+/*=============== FOOTER ===============*/
+.footer {
+  background-color: var(--color-principal);
+  color: #fff; }
+  .footer__contenido {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center; }
+  .footer__logo {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 3rem; }
+  .footer__descripcion {
+    text-align: center;
+    font-size: var(--h3-font-size);
+    padding: 0 1rem;
+    line-height: 1.5rem; }
+  .footer__redes {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch; }
+  .footer__redes h3 {
+    color: var(--hover-color);
+    font-size: var(--h1-font-size);
+    margin-bottom: 1.5rem;
+    font-weight: 400; }
+  .footer__sociales a {
+    color: var(--hover-color); }
+  .footer__sociales a:hover {
+    color: white; }
+  .footer__sociales {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    font-size: 2rem; }
+  .footer__sociales i {
+    padding: 0.5rem; }
+  .footer__suscripcion {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center; }
+  .footer__input {
+    width: 100%;
+    min-height: 47px;
+    padding: 6px 16px;
+    margin-bottom: 0.5rem;
+    background-color: #ffffff;
+    border-color: var(--color-principal);
+    border-width: 2px 2px 2px 2px;
+    border-radius: 7px 7px 7px 7px; }
+  .footer__boton {
+    background: var(--color-principal-alterno);
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-semi-bold);
+    letter-spacing: .1rem;
+    border: none;
+    border-radius: 11px;
+    padding: 20px 45px;
+    color: #ffffff;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: .5rem; }
+  .footer__boton:hover {
+    background-color: var(--hover-color);
+    color: var(--color-principal);
+    font-weight: 700 !important; }
+
+/*=============== HEADER ===============*/
+.header {
+  width: 100%;
+  background-color: var(--color-principal);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  transition: 0.5s;
+  padding: 1rem 0;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1); }
+
+/*=============== NAV ===============*/
+.nav {
+  height: calc(var(--header-height));
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  @media screen and (max-width: 767px) {
+    .nav__menu {
+      position: fixed;
+      background-color: var(--color-principal);
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem 0;
+      width: 100%;
+      top: -100%;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      transition: 0.4s;
+      border-radius: 0 0 2rem 2rem;
+      z-index: var --z-fixed; } }
+  .nav__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1.5rem; }
+  .nav__link, .nav__toggle {
+    color: #fff;
+    font-weight: var(--font-semi-bold); }
+  .nav__link:hover, .nav__activo {
+    color: var(--hover-color); }
+  .nav__toggle {
+    font-size: 1.5rem;
+    cursor: pointer; }
+  .nav__logo {
+    width: 20%; }
+
+/* MOSTRAR MENU */
+.show-menu {
+  top: calc(var(--header-heigth) + .8rem); }
+
+/*=============== PAGINA INDEX ===============*/
+/*========== SECCION FONDO ==========*/
+.fondo {
+  height: 100%; }
+  .fondo__img {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(5, 7, 12, 0.6), rgba(5, 7, 12, 0.6)), url(../img/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    top: 0;
+    left: 0;
+    right: 0; }
+  .fondo__container {
+    position: relative;
+    height: calc(100vh - var(--header-heigth));
+    align-items: center;
+    justify-content: center; }
+  .fondo__datos {
+    display: grid;
+    grid-template-rows: 3fr 1fr; }
+  .fondo__datos--titulo, .fondo__datos--subtitulo, .fondo__datos--icono {
+    color: white; }
+  .fondo__datos--titulo {
+    display: block;
+    font-weight: var(--font-bold);
+    font-size: var(--display-font-size);
+    line-height: 3.2rem;
+    text-align: center;
+    margin-top: 10rem; }
+  .fondo__datos--subtitulo {
+    display: block;
+    text-align: center;
+    font-size: var(--h3-font-size);
+    letter-spacing: 0.2rem;
+    margin-top: 5rem; }
+  .fondo__datos--icono {
+    display: block;
+    text-align: center;
+    font-size: var(--h2-font-size);
+    margin-top: 1rem; }
+
+/*========== SECCION AUSPICIANTES ==========*/
+.auspiciantes__container {
+  grid-template-columns: repeat(auto-fit, minmx(220px)); }
+
+.auspiciantes__img {
+  width: 75%; }
+
+/*========== SECCION EXPERIENCIA ==========*/
+.experiencia__subtitulos {
+  font-size: var(--normal-font-size);
+  margin-top: 2.5rem;
+  line-height: 2rem;
+  color: #474b4e;
+  text-align: justify; }
+
+.experiencia__container {
+  row-gap: 2.5rem;
+  justify-content: center;
+  justify-items: center; }
+
+.experiencia__tabla {
+  margin-top: 1.5rem; }
+
+.experiencia__img {
+  display: block;
+  margin: auto;
+  width: 75%; }
+
+.experiencia__titulo {
+  text-align: center;
+  margin: 1rem 0; }
+
+.experiencia__descripcion {
+  text-align: justify;
+  line-height: 2rem; }
+
+/*========== SECCION MISION ==========*/
+.mision {
+  background: #13203d;
+  background: linear-gradient(90deg, #13203d 0%, #080d18 53%, black 100%);
+  color: #fff; }
+  .mision__titulo {
+    font-size: var(--h1-font-size);
+    color: #fff;
+    text-align: center;
+    font-weight: var(--font-semi-bold);
+    line-height: 2rem; }
+  .mision__subtitulos {
+    font-size: var(--normal-font-size);
+    margin-top: 2.5rem;
+    line-height: 2rem;
+    text-align: center; }
+  .mision__video {
+    display: block;
+    margin: auto; }
+
+/*========== SECCION PROGRAMA ==========*/
+.programa .container-fluid {
+  margin-right: 0; }
+
+.programa__container {
+  padding-right: 0 !important; }
+
+.programa__texto {
+  margin-right: var(--mb-1-5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+
+.programa__titulo {
+  font-size: var(--h2-font-size);
+  margin-bottom: 1rem; }
+
+/*========== SECCION PROVINCIA ==========*/
+.provincia {
+  background-image: linear-gradient(rgba(5, 7, 12, 0.8), rgba(5, 7, 12, 0.8)), url(../img/fiesta.jpg);
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  padding: 250px 0 200px;
+  color: #fff; }
+  .provincia__encabezado {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 2rem; }
+  .provincia__titulo {
+    margin-bottom: 2rem;
+    font-size: var(--h1-font-size);
+    color: #fff;
+    line-height: 2rem; }
+  .provincia__descripcion {
+    text-align: justify;
+    font-size: var(--normal-font-size); }
+  .provincia__imagen {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 1rem 0;
+    color: #fff; }
+  .provincia__imagen p {
+    margin-top: 1rem;
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-semi-bold);
+    letter-spacing: 0.2rem;
+    text-align: center; }
+  .provincia__logo {
+    width: 50%; }
+  .provincia__footer__texto {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 3.5rem; }
+
+/*========== SECCION APRENDER ==========*/
+.aprender .section {
+  padding-bottom: 0 !important; }
+
+.aprender__subtitulo {
+  font-size: var(--h3-font-size);
+  padding: 2rem 0;
+  line-height: 2rem;
+  text-align: center; }
+
+.aprender__fondo {
+  background-image: linear-gradient(rgba(5, 7, 12, 0.8), rgba(5, 7, 12, 0.8)), url(../img/fiesta.jpg);
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  color: #fff; }
+
+.aprender__encabezado {
+  background-color: #003778;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center; }
+
+.aprender__encabezado i {
+  font-size: 5rem;
+  color: var(--hover-color);
+  margin-top: 3rem; }
+
+.aprender__descripcion {
+  font-size: var(--h3-font-size);
+  line-height: 2.5rem;
+  font-weight: 300;
+  text-align: center;
+  padding: 0 1.5rem; }
+
+.aprender__fundador {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-semi-bold);
+  margin-bottom: 3rem; }
+
+/*=============== CLASES CSS REUSABLES ===============*/
+.section {
+  padding: 4.5rem 0 2rem; }
+  .section__titulos, .section__titulos--centrados {
+    font-size: var(--h1-font-size);
+    color: var(--color-titulos);
+    text-align: center;
+    margin-bottom: var(--mb-1); }
+
+.svg__color {
+  fill: var(--color-principal); }
+
+.svg__blob {
+  fill: var(--color-principal-alterno); }
+
+.svg__img {
+  width: 300px;
+  justify-self: center; }
+
+/*=============== LAYOUT ===============*/
+.container {
+  max-width: 968px;
+  margin-left: var(--mb-1-5);
+  margin-right: var(--mb-1-5); }
+
+.container-fluid {
+  max-width: 100%;
+  margin-left: var(--mb-1-5);
+  margin-right: var(--mb-1-5); }
+
+.grid {
+  display: grid;
+  gap: 1.5rem; }
+
+/*=============== FOOTER ===============*/
+.footer {
+  background-color: var(--color-principal);
+  color: #fff; }
+  .footer__contenido {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center; }
+  .footer__logo {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 3rem; }
+  .footer__descripcion {
+    text-align: center;
+    font-size: var(--h3-font-size);
+    padding: 0 1rem;
+    line-height: 1.5rem; }
+  .footer__redes {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch; }
+  .footer__redes h3 {
+    color: var(--hover-color);
+    font-size: var(--h1-font-size);
+    margin-bottom: 1.5rem;
+    font-weight: 400; }
+  .footer__sociales a {
+    color: var(--hover-color); }
+  .footer__sociales a:hover {
+    color: white; }
+  .footer__sociales {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    font-size: 2rem; }
+  .footer__sociales i {
+    padding: 0.5rem; }
+  .footer__suscripcion {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center; }
+  .footer__input {
+    width: 100%;
+    min-height: 47px;
+    padding: 6px 16px;
+    margin-bottom: 0.5rem;
+    background-color: #ffffff;
+    border-color: var(--color-principal);
+    border-width: 2px 2px 2px 2px;
+    border-radius: 7px 7px 7px 7px; }
+  .footer__boton {
+    background: var(--color-principal-alterno);
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-semi-bold);
+    letter-spacing: .1rem;
+    border: none;
+    border-radius: 11px;
+    padding: 20px 45px;
+    color: #ffffff;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: .5rem; }
+  .footer__boton:hover {
+    background-color: var(--hover-color);
+    color: var(--color-principal);
+    font-weight: 700 !important; }
+
+/*=============== MEDIAS QUERIES ===============*/
+/* Para dispositivos pequeños */
+@media screen and (max-width: 350px) {
+  .auspiciantes__img {
+    width: 100%; } }
+
+/* Para dispositivos medianos */
+@media screen and (min-width: 767px) {
+  .section {
+    padding: 6rem 0 2rem; }
+  .nav {
+    height: calc(var(--header-heigth)+ 1.5rem); }
+    .nav__list {
+      flex-direction: row;
+      column-gap: 1.5rem; }
+    .nav__link {
+      font-size: var(--small-font-size); }
+    .nav__toggle {
+      display: none; }
+    .nav__logo {
+      width: 12%; }
+  .fondo__datos--titulo {
+    line-height: 4.5rem; }
+  .auspiciantes__container {
+    grid-template-columns: repeat(2, 1fr); }
+  /*========== SECCION EXPERIENCIA ==========*/
+  .experiencia__subtitulos {
+    font-size: var(--normal-font-size);
+    margin-top: 2.5rem;
+    line-height: 2rem;
+    color: #474b4e;
+    text-align: justify; }
+  .experiencia__container {
+    row-gap: 2.5rem;
+    justify-content: center;
+    justify-items: center; }
+  .experiencia__tabla {
+    margin-top: 1.5rem; }
+  .experiencia__img {
+    display: block;
+    margin: auto;
+    width: 75%; }
+  .experiencia__titulo {
+    text-align: center;
+    margin: 1rem 0; }
+  .experiencia__descripcion {
+    text-align: justify;
+    line-height: 2rem; }
+  /*========== SECCION MISION ==========*/
+  .mision {
+    background: #13203d;
+    background: linear-gradient(90deg, #13203d 0%, #080d18 53%, black 100%);
+    color: #fff; }
+    .mision__titulo {
+      font-size: var(--h1-font-size);
+      color: #fff;
+      text-align: center;
+      font-weight: var(--font-semi-bold);
+      line-height: 2rem; }
+    .mision__subtitulos {
+      font-size: var(--h3-font-size);
+      margin-top: 2.5rem;
+      line-height: 2rem;
+      text-align: center; }
+    .mision__video {
+      display: block;
+      margin: auto; }
+  /*========== SECCION EXPERIENCIA ==========*/
+  .experiencia .section__titulos {
+    line-height: 3.5rem; }
+  .experiencia__tabla {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2.5rem; }
+  .experiencia__descripcion {
+    text-align: center; }
+  .experiencia__img {
+    width: 40%; }
+  /*========== SECCION MISION ==========*/
+  .mision__video iframe {
+    width: 550px;
+    height: 300px; }
+  /*========== SECCION PROGRAMA ==========*/
+  .programa__container {
+    grid-template-columns: repeat(2, 1fr); }
+  .programa__texto {
+    text-align: left;
+    margin-left: 2.5rem; }
+  .programa__titulo {
+    font-size: 2rem;
+    line-height: 2.5rem; }
+  .programa__descripcion {
+    line-height: 1.5rem;
+    text-align: justify; }
+  /*========== SECCION PROVINCIA ==========*/
+  .provincia__titulo {
+    line-height: 3rem; }
+  .provincia__descripcion {
+    font-size: var(--h3-font-size); }
+  .provincia__imagenes {
+    display: flex; }
+  .provincia__logo {
+    width: 35%; }
+  /*========== SECCION APRENDER ==========*/
+  .aprender__encabezado {
+    width: 50%;
+    height: 80vh; }
+  .aprender__encabezado i {
+    font-size: 5rem;
+    color: var(--hover-color);
+    margin-top: 3rem; }
+  .aprender__descripcion {
+    font-size: var(--h3-font-size);
+    padding: 0 0.6rem;
+    line-height: 2.5rem;
+    font-weight: 300;
+    text-align: center; }
+  .aprender__fundador {
+    font-size: 1.4rem;
+    font-weight: var(--font-semi-bold);
+    margin-bottom: 3rem; }
+  /*========== FOOTER ==========*/
+  .footer__container {
+    grid-template-columns: repeat(2, 1fr); }
+  .footer__logo {
+    width: 50%;
+    margin-bottom: 2rem; }
+  .footer__descripcion {
+    font-size: var(--small-font-size);
+    text-align: left; }
+  .footer__redes {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-content: stretch; }
+  .footer__redes h3 {
+    color: var(--hover-color);
+    font-size: var(--h3-font-size);
+    font-weight: 400;
+    margin-bottom: 0; }
+  .footer__boton:hover {
+    background-color: var(--hover-color);
+    color: var(--color-principal);
+    font-weight: 700 !important; } }
+
+/* Para dispositivos grandes */
+@media screen and (min-width: 1024px) {
+  .container {
+    margin: auto !important; }
+  .fondo__datos {
+    margin-top: 1.3rem;
+    padding: 0; }
+  .fondo__datos--titulo {
+    line-height: 5.5rem; }
+  .fondo__datos--subtitulo {
+    letter-spacing: 0.4rem; }
+  .fondo__datos--icono {
+    font-size: 3rem !important;
+    font-weight: var(--font-semi-bold); }
+  .auspiciantes__container {
+    grid-template-columns: repeat(4, 1fr); }
+  /*========== SECCION EXPERIENCIA ==========*/
+  .experiencia__subtitulos {
+    font-size: var(--h3-font-size);
+    line-height: 2rem;
+    color: #474b4e;
+    text-align: center;
+    margin-bottom: 9rem; }
+  .experiencia__tabla {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 2.5rem; }
+  .experiencia__descripcion {
+    text-align: center; }
+  /*========== SECCION MISION ==========*/
+  .mision__video iframe {
+    width: 750px;
+    height: 400px; }
+  /*========== SECCION PROGRAMA ==========*/
+  .programa__texto {
+    text-align: left;
+    margin-left: 8rem; }
+  .programa__titulo {
+    font-size: 2.5rem;
+    line-height: 3rem; }
+  .programa__descripcion {
+    font-size: var(--h3-font-size);
+    text-align: justify;
+    line-height: 2rem; }
+  /*========== SECCION APRENDER ==========*/
+  .aprender__fondo {
+    padding: 4rem 0; }
+  .aprender__descripcion {
+    font-size: 1.6rem;
+    padding: 0 7.3rem;
+    line-height: 2.5rem;
+    font-weight: 300;
+    text-align: center; }
+  /*========== FOOTER ==========*/
+  .footer__logo {
+    width: 30%;
+    margin-right: 19rem; }
+  .footer__descripcion {
+    font-size: calc(var(--small-font-size)+1rem);
+    text-align: left; }
+  .footer__suscripcion {
+    width: 75%;
+    flex-direction: row; }
+  .footer__input {
+    margin-right: .5rem; }
+  .footer__boton {
+    font-size: .65rem;
+    padding: 15px 8px;
+    border-radius: 8px; } }
+
+@media screen and (min-width: 1440px) {
+  /*========== SECCION PROGRAMA ==========*/
+  .programa__titulo {
+    font-size: 3.3rem;
+    line-height: 3.5rem; } }

@@ -1,0 +1,110 @@
+/*=============== FOOTER ===============*/
+.footer {
+    background-color: var(--color-principal);
+    color: #fff;
+    &__contenido {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    &__logo {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        margin-bottom: 3rem;
+    }
+
+    &__descripcion {
+        text-align: center;
+        font-size: var(--h3-font-size);
+        padding: 0 1rem;
+        line-height: 1.5rem;
+    }
+
+    &__redes {
+        width: 100%;
+        margin-bottom: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: stretch;
+    }
+
+    &__redes h3 {
+        color: var(--hover-color);
+        font-size: var(--h1-font-size);
+        margin-bottom: 1.5rem;
+        font-weight: 400;
+    }
+
+    &__sociales a{
+        color: var(--hover-color);
+    }
+
+    &__sociales a:hover{
+        color: white;
+    }
+
+    &__sociales {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        font-size: 2rem;
+    }
+
+    &__sociales i {
+        padding: 0.5rem;
+    }
+
+    &__suscripcion {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    &__input {
+        width: 100%;
+        min-height: 47px;
+        padding: 6px 16px;
+        margin-bottom: 0.5rem;
+        background-color: #ffffff;
+        border-color: var(--color-principal);
+        border-width: 2px 2px 2px 2px;
+        border-radius: 7px 7px 7px 7px;
+    }
+
+    &__boton {
+        background: var(--color-principal-alterno);
+        font-size: var(--normal-font-size);
+        font-weight: var(--font-semi-bold);
+        letter-spacing: .1rem;
+        border: none;
+        border-radius: 11px;
+        padding: 20px 45px;
+        color: #ffffff;
+        display: inline-block;
+        text-align: center;
+        cursor: pointer;
+        margin-bottom: .5rem;
+    }
+
+    &__boton:hover{
+        background-color: var(--hover-color);
+        color: var(--color-principal);
+        font-weight: 700 !important;
+    }
+}

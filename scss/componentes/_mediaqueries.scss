@@ -1,0 +1,371 @@
+/*=============== MEDIAS QUERIES ===============*/
+
+/* Para dispositivos pequeños */
+
+@media screen and (max-width: 350px) {
+    .auspiciantes {
+        &__img {
+            width: 100%;
+        }
+    }
+}
+
+/* Para dispositivos medianos */
+
+@media screen and (min-width: 767px) {
+    .section {
+        padding: 6rem 0 2rem;
+    }
+
+    .nav {
+        height: calc(var(--header-heigth)+ 1.5rem);
+
+        &__list {
+            flex-direction: row;
+            column-gap: 1.5rem;
+        }
+
+        &__link {
+            font-size: var(--small-font-size);
+        }
+
+        &__toggle {
+            display: none;
+        }
+
+        &__logo {
+            width: 12%;
+        }
+    }
+
+    .fondo {
+        &__datos--titulo {
+            line-height: 4.5rem;
+        }
+    }
+
+    .auspiciantes {
+        &__container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    /*========== SECCION EXPERIENCIA ==========*/
+    .experiencia {
+        &__subtitulos {
+            font-size: var(--normal-font-size);
+            margin-top: 2.5rem;
+            line-height: 2rem;
+            color: #474b4e;
+            text-align: justify;
+        }
+
+        &__container {
+            row-gap: 2.5rem;
+            justify-content: center;
+            justify-items: center;
+        }
+        &__tabla {
+            margin-top: 1.5rem;
+        }
+        &__img {
+            display: block;
+            margin: auto;
+            width: 75%;
+        }
+        &__titulo {
+            text-align: center;
+            margin: 1rem 0;
+        }
+        &__descripcion {
+            text-align: justify;
+            line-height: 2rem;
+        }
+    }
+
+    /*========== SECCION MISION ==========*/
+    .mision {
+        background: rgb(19, 32, 61);
+        background: linear-gradient(90deg, rgba(19, 32, 61, 1) 0%, rgba(8, 13, 24, 1) 53%, rgba(0, 0, 0, 1) 100%);
+        color: #fff;
+
+        &__titulo {
+            font-size: var(--h1-font-size);
+            color: #fff;
+            text-align: center;
+            font-weight: var(--font-semi-bold);
+            line-height: 2rem;
+        }
+
+        &__subtitulos {
+            font-size: var(--h3-font-size);
+            margin-top: 2.5rem;
+            line-height: 2rem;
+            text-align: center;
+        }
+
+        &__video {
+            display: block;
+            margin: auto;
+        }
+    }
+    /*========== SECCION EXPERIENCIA ==========*/
+    .experiencia {
+        .section__titulos {
+            line-height: 3.5rem;
+        }
+
+        &__tabla {
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 2.5rem;
+        }
+
+        &__descripcion {
+            text-align: center;
+        }
+
+        &__img {
+            width: 40%;
+        }
+    }
+    /*========== SECCION MISION ==========*/
+
+    .mision {
+        &__video iframe {
+            width: 550px;
+            height: 300px;
+        }
+    }
+
+    /*========== SECCION PROGRAMA ==========*/
+    .programa {
+        &__container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        &__texto {
+            text-align: left;
+            margin-left: 2.5rem;
+        }
+
+        &__titulo {
+            font-size: 2rem;
+            line-height: 2.5rem;
+        }
+
+        &__descripcion {
+            line-height: 1.5rem;
+            text-align: justify;
+        }
+    }
+
+    /*========== SECCION PROVINCIA ==========*/
+    .provincia {
+        &__titulo {
+            line-height: 3rem;
+        }
+
+        &__descripcion {
+            font-size: var(--h3-font-size);
+        }
+
+        &__imagenes {
+            display: flex;
+        }
+
+        &__logo {
+            width: 35%;
+        }
+    }
+    /*========== SECCION APRENDER ==========*/
+    .aprender {
+        &__encabezado {
+            width: 50%;
+            height: 80vh;
+        }
+
+        &__encabezado i {
+            font-size: 5rem;
+            color: var(--hover-color);
+            margin-top: 3rem;
+        }
+
+        &__descripcion {
+            font-size: var(--h3-font-size);
+            padding: 0 0.6rem;
+            line-height: 2.5rem;
+            font-weight: 300;
+            text-align: center;
+        }
+
+        &__fundador {
+            font-size: 1.4rem;
+            font-weight: var(--font-semi-bold);
+            margin-bottom: 3rem;
+        }
+    }
+
+    /*========== FOOTER ==========*/
+
+    .footer {
+        &__container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        &__logo {
+            width: 50%;
+            margin-bottom: 2rem;
+        }
+
+        &__descripcion {
+            font-size: var(--small-font-size);
+            text-align: left;
+        }
+        &__redes {
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            align-content: stretch;
+        }
+        &__redes h3 {
+            color: var(--hover-color);
+            font-size: var(--h3-font-size);
+            font-weight: 400;
+            margin-bottom: 0;
+        }
+        
+    }
+}
+
+/* Para dispositivos grandes */
+@media screen and (min-width: 1024px) {
+    .container {
+        margin: auto !important;
+    }
+
+    .fondo {
+        &__datos {
+            margin-top: 1.3rem;
+            padding: 0;
+        }
+        &__datos--titulo {
+            line-height: 5.5rem;
+        }
+
+        &__datos--subtitulo {
+            letter-spacing: 0.4rem;
+        }
+
+        &__datos--icono {
+            font-size: 3rem !important;
+            font-weight: var(--font-semi-bold);
+        }
+    }
+
+    .auspiciantes {
+        &__container {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    /*========== SECCION EXPERIENCIA ==========*/
+    .experiencia {
+        &__subtitulos {
+            font-size: var(--h3-font-size);
+            line-height: 2rem;
+            color: #474b4e;
+            text-align: center;
+            margin-bottom: 9rem;
+        }
+
+        &__tabla {
+            grid-template-columns: repeat(4, 1fr);
+            column-gap: 2.5rem;
+        }
+
+        &__descripcion {
+            text-align: center;
+        }
+    }
+
+    /*========== SECCION MISION ==========*/
+
+    .mision {
+        &__video iframe {
+            width: 750px;
+            height: 400px;
+        }
+    }
+
+    /*========== SECCION PROGRAMA ==========*/
+    .programa {
+        &__texto {
+            text-align: left;
+            margin-left: 8rem;
+        }
+
+        &__titulo {
+            font-size: 2.5rem;
+            line-height: 3rem;
+        }
+
+        &__descripcion {
+            font-size: var(--h3-font-size);
+            text-align: justify;
+            line-height: 2rem;
+        }
+    }
+    /*========== SECCION APRENDER ==========*/
+    .aprender {
+        &__fondo {
+            padding: 4rem 0;
+        }
+
+        &__descripcion {
+            font-size: 1.6rem;
+            padding: 0 7.3rem;
+            line-height: 2.5rem;
+            font-weight: 300;
+            text-align: center;
+        }
+    }
+
+    /*========== FOOTER ==========*/
+
+    .footer {
+        &__logo {
+            width: 30%;
+            margin-right: 19rem;
+        }
+
+        &__descripcion {
+            font-size: calc(var(--small-font-size)+1rem);
+            text-align: left;
+        }
+
+        &__suscripcion {
+            width: 75%;
+            flex-direction: row;
+        }
+
+        &__input{
+            margin-right: .5rem;
+        }
+
+        &__boton {
+            font-size: .65rem;
+            padding: 15px 8px;
+            border-radius: 8px;
+        }
+
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    /*========== SECCION PROGRAMA ==========*/
+    .programa {
+        &__titulo {
+            font-size: 3.3rem;
+            line-height: 3.5rem;
+        }
+    }
+}

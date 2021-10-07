@@ -1,0 +1,72 @@
+/*=============== HEADER ===============*/
+.header {
+    width: 100%;
+    background-color: var(--color-principal);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    transition: 0.5s;
+    padding: 1rem 0;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+/*=============== NAV ===============*/
+.nav {
+    height: calc(var(--header-height));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__menu {
+        @media screen and(max-width: 767px) {
+            position: fixed;
+            background-color: var(--color-principal);
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem 0;
+            width: 100%;
+            top: -100%;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            transition: 0.4s;
+            border-radius: 0 0 2rem 2rem;
+            z-index: var (--z-fixed);
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 1.5rem;
+    }
+
+    &__link,
+    &__toggle {
+        color: #fff;
+        font-weight: var(--font-semi-bold);
+    }
+
+    &__link:hover,
+    &__activo{
+        color: var(--hover-color);
+    }
+
+
+    &__toggle {
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    &__logo {
+        width: 20%;
+    }
+
+    
+}
+
+/* MOSTRAR MENU */
+.show-menu{
+    top: calc(var(--header-heigth) + .8rem);
+}

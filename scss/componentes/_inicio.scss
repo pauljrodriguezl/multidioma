@@ -1,0 +1,263 @@
+/*=============== PAGINA INDEX ===============*/
+
+/*========== SECCION FONDO ==========*/
+.fondo {
+    height: 100%;
+    &__img {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background-image: linear-gradient(rgba(5, 7, 12, 0.6), rgba(5, 7, 12, 0.6)), url(../img/banner.jpg);
+        background-size: cover;
+        background-position: center;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    &__container {
+        position: relative;
+        height: calc(100vh - var(--header-heigth));
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__datos {
+        display: grid;
+        grid-template-rows: 3fr 1fr;
+    }
+
+    &__datos--titulo,
+    &__datos--subtitulo,
+    &__datos--icono {
+        color: white;
+    }
+
+    &__datos--titulo {
+        display: block;
+        font-weight: var(--font-bold);
+        font-size: var(--display-font-size);
+        line-height: 3.2rem;
+        text-align: center;
+        margin-top: 10rem;
+    }
+
+    &__datos--subtitulo {
+        display: block;
+        text-align: center;
+        font-size: var(--h3-font-size);
+        letter-spacing: 0.2rem;
+        margin-top: 5rem;
+    }
+
+    &__datos--icono {
+        display: block;
+        text-align: center;
+        font-size: var(--h2-font-size);
+        margin-top: 1rem;
+    }
+}
+
+/*========== SECCION AUSPICIANTES ==========*/
+.auspiciantes {
+    &__container {
+        grid-template-columns: repeat(auto-fit, minmx(220px));
+    }
+
+    &__img {
+        width: 75%;
+    }
+}
+
+/*========== SECCION EXPERIENCIA ==========*/
+.experiencia {
+    &__subtitulos {
+        font-size: var(--normal-font-size);
+        margin-top: 2.5rem;
+        line-height: 2rem;
+        color: #474b4e;
+        text-align: justify;
+    }
+
+    &__container {
+        row-gap: 2.5rem;
+        justify-content: center;
+        justify-items: center;
+    }
+    &__tabla {
+        margin-top: 1.5rem;
+    }
+    &__img {
+        display: block;
+        margin: auto;
+        width: 75%;
+    }
+    &__titulo {
+        text-align: center;
+        margin: 1rem 0;
+    }
+    &__descripcion {
+        text-align: justify;
+        line-height: 2rem;
+    }
+}
+
+/*========== SECCION MISION ==========*/
+.mision {
+    background: rgb(19, 32, 61);
+    background: linear-gradient(90deg, rgba(19, 32, 61, 1) 0%, rgba(8, 13, 24, 1) 53%, rgba(0, 0, 0, 1) 100%);
+    color: #fff;
+
+    &__titulo {
+        font-size: var(--h1-font-size);
+        color: #fff;
+        text-align: center;
+        font-weight: var(--font-semi-bold);
+        line-height: 2rem;
+    }
+
+    &__subtitulos {
+        font-size: var(--normal-font-size);
+        margin-top: 2.5rem;
+        line-height: 2rem;
+        text-align: center;
+    }
+
+    &__video {
+        display: block;
+        margin: auto;
+    }
+}
+
+/*========== SECCION PROGRAMA ==========*/
+.programa {
+    .container-fluid {
+        margin-right: 0;
+    }
+
+    &__container {
+        padding-right: 0 !important;
+    }
+
+    &__texto {
+        margin-right: var(--mb-1-5);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    &__titulo {
+        font-size: var(--h2-font-size);
+        margin-bottom: 1rem;
+    }
+}
+
+/*========== SECCION PROVINCIA ==========*/
+.provincia {
+    background-image: linear-gradient(rgba(5, 7, 12, 0.8), rgba(5, 7, 12, 0.8)), url(../img/fiesta.jpg);
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    padding: 250px 0 200px;
+    color: #fff;
+
+    &__encabezado {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        line-height: 2rem;
+    }
+    &__titulo {
+        margin-bottom: 2rem;
+        font-size: var(--h1-font-size);
+        color: #fff;
+        line-height: 2rem;
+    }
+    &__descripcion {
+        text-align: justify;
+        font-size: var(--normal-font-size);
+    }
+    &__imagen {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        margin: 1rem 0;
+        color: #fff;
+    }
+
+    &__imagen p {
+        margin-top: 1rem;
+        font-size: var(--normal-font-size);
+        font-weight: var(--font-semi-bold);
+        letter-spacing: 0.2rem;
+        text-align: center;
+    }
+
+    &__logo {
+        width: 50%;
+    }
+
+    &__footer__texto {
+        color: #fff;
+        text-align: center;
+        margin-bottom: 3.5rem;
+    }
+}
+
+/*========== SECCION APRENDER ==========*/
+.aprender {
+    .section{
+        padding-bottom: 0 !important;
+    }
+    &__subtitulo {
+        font-size: var(--h3-font-size);
+        padding: 2rem 0;
+        line-height: 2rem;
+        text-align: center;
+    }
+
+    &__fondo {
+        background-image: linear-gradient(rgba(5, 7, 12, 0.8), rgba(5, 7, 12, 0.8)), url(../img/fiesta.jpg);
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        color: #fff;
+    }
+
+    &__encabezado {
+        background-color: #003778;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+    }
+
+    &__encabezado i{
+        font-size: 5rem;
+        color: var(--hover-color);
+        margin-top: 3rem;
+    }
+
+    &__descripcion{
+        font-size: var(--h3-font-size);
+        line-height: 2.5rem;
+        font-weight: 300;
+        text-align: center;
+        padding: 0 1.5rem;
+    }
+
+    &__fundador{
+        font-size: var(--h3-font-size);
+        font-weight: var(--font-semi-bold);
+        margin-bottom: 3rem;
+    }
+}

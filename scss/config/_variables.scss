@@ -1,0 +1,62 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+    --header-heigth: 3rem;
+
+    /*========== CROMATICA ==========*/
+    --hue: 225;
+    --sat: 75%;
+    --color-principal: hsl(var(--hue), var(--sat), 9%);
+    --color-principal-luz: hsl(var(--hue), var(--sat), 30%);
+    --color-principal-claros: hsl(var(--hue), var(--sat), 40%);
+    --color-principal-alterno: hsl(var(--hue), var(--sat), 60%);
+    --color-titulos: hsl(var(--hue), var(--sat), 25%);
+    --color-textos: hsl(var(--hue), 4%, 15%);
+    --color-textos-claros: hsl(var(--hue), 4%, 65%);
+    --body-color: hsl(var(--hue), 0%, 100%);
+    --container-color: #fff;
+    --hover-color:hsl(41, 100%, 68%);
+    --scroll-barra-color: hsl(var(--hue), 4%, 85%);
+    --scroll-thumb-color: hsl(var(--hue), 4%, 75%);
+
+    /*========== TAMAÑOS DE FUENTES ==========*/
+
+    --body-font: "Roboto", sans-serif;
+
+    --display-font-size: 2.5rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.125rem;
+    --normal-font-size: 0.938rem;
+    --small-font-size: 0.813rem;
+    --smaller-font-size: 0.75rem;
+
+    /*========== TAMAÑOS DE FUENTES ==========*/
+    @media screen and (min-width: 426px) {
+        --display-font-size: 5rem;
+        --h1-font-size: 3.5rem;
+        --h2-font-size: 1.75rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: 0.875rem;
+        --smaller-font-size: 0.75rem;
+    }
+
+    /*========== GROSOR DE FUENTES ==========*/
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+
+    /*========== MARGENES ==========*/
+    --mb-0-5: 0.5rem;
+    --mb-0-75: 0.75rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+
+    /*========== MARGENES ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
